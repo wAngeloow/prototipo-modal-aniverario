@@ -3,10 +3,7 @@ let modalContent = document.querySelector('#card-modal');
 
 //Quando a página carregar
 window.onload = function () {
-    //Add display flex no modal
-    modal.style.display = 'flex';
-    //Add overflow hidden no body
-    document.body.style.overflow = 'hidden';
+    modal.style.display = 'flex'; //Add display flex no modal
 }
 
 //Quando clicar no fundo, fecha o modal
@@ -24,3 +21,9 @@ function fecharModal() {
     modal.style.display = "none";
     document.body.style.overflow = 'auto';
 }
+
+//Efeito para o modal só aparecer depois de 1s
+setTimeout(() => {
+   modal.style.opacity = "1.0" 
+    document.body.style.overflow = 'hidden'; //Add overflow hidden no body
+}, 1000);
